@@ -22,20 +22,24 @@ const StyledLoginContainer = styled.div`
   border-radius: 5px;
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 `;
+
 const StyledImageWrapper = styled.div`
   margin-bottom: 50px;
 `;
 
-function login() {
+const Login = () => {
   const [signInWithGoogle, _user, _loading, _error] = useSignInWithGoogle(auth);
+
   const signIn = () => {
     signInWithGoogle();
   };
+
   return (
     <StyledContainer>
       <Head>
         <title>Login</title>
       </Head>
+
       <StyledLoginContainer>
         <StyledImageWrapper>
           <Image
@@ -45,13 +49,13 @@ function login() {
             width="200px"
           />
         </StyledImageWrapper>
-        {/* <Button variant="outlined" onClick={signIn}> */}
+
         <Button variant="outlined" onClick={signIn}>
           Sign in with Google
         </Button>
       </StyledLoginContainer>
     </StyledContainer>
   );
-}
+};
 
-export default login;
+export default Login;
