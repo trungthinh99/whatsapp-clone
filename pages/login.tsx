@@ -46,7 +46,7 @@ function login() {
           />
         </StyledImageWrapper>
         {/* <Button variant="outlined" onClick={signIn}> */}
-        <Button variant="outlined" onClick={() => signInWithGoogle()}>
+        <Button variant="outlined" onClick={signIn}>
           Sign in with Google
         </Button>
       </StyledLoginContainer>
